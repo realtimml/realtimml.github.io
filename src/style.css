@@ -1,0 +1,52 @@
+:root {
+    --bg0: #1d2021;
+    --bg1: #282828;
+    --fg0: #d4be98;
+    --fg1: #ddc7a1;
+    --grey0: #7c6f64;
+}
+
+
+body {
+    background-color: var(--bg0);
+    margin: 0;
+}
+
+#header-bar {
+    height: 76px;
+    font-size: 28px;
+    background-color: var(--bg1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+#header-title {
+    color: var(--fg1);
+    font-family: "Tiny5", sans-serif;
+}
+
+#header-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10%;
+}
+
+#header-sites {
+    display: flex;
+    gap: 52px;
+}
+
+#header-socials {
+    display: flex;
+    gap: 20px;
+}
+
+#header-buttons > div > a {
+    color: var(--fg0);
+    font-family: "VT323", monospace;
+    text-decoration: none;
+}
