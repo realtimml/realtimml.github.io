@@ -2,10 +2,13 @@
     --bg_dim: #141617;
     --bg0: #1d2021;
     --bg1: #282828;
+    --bg_visual_green: #333e34;
+    --bg_current_word: #32302f;
     --fg0: #d4be98;
     --fg1: #ddc7a1;
     --grey0: #7c6f64;
     --red: #ea6962;
+    --orange: #e78a4e;
     --yellow: #d8a657;
     --green: #a9b665;
     --aqua: #89b482;
@@ -16,6 +19,10 @@
 body {
     background-color: var(--bg0);
     margin: 0;
+}
+
+::selection {
+    background: var(--bg_visual_green);
 }
 
 /* Header */
@@ -183,3 +190,122 @@ body {
 .color-block:nth-child(8) {
     background-color: var(--fg1);
 }
+
+
+/* Projects */
+#projects-header {
+    margin-left: 10vw;
+    color: var(--fg1);
+    font-family: "Tiny5", sans-serif;
+    font-size: 40px;
+}
+
+.project {
+    display: block;
+    height: 350px;
+    position: relative;
+}
+
+.project-card, .project-img {
+    margin-left: 10vw;
+    height: 70%;
+    border-radius: 17px;
+    position: absolute;
+    filter: drop-shadow(8px 10px 12px var(--bg_dim));
+}
+
+.project-card {
+    aspect-ratio: 2 / 1.25;
+    background-color: var(--bg1);
+    padding-left: 22px;
+    padding-right: 22px;
+    font-family: "VT323", monospace;
+    color: var(--fg0);
+}
+
+.project-card > h2 {
+    font-size: 30px;
+    margin-bottom: 0;
+}
+
+.project-card > h2 > a {
+    color: var(--fg0);
+    text-decoration: none;
+}
+
+.project-card > h2 > a > i {
+    font-size: 19px;
+}
+
+.project-card > p {
+    font-size: 19px;
+    margin: 0;
+    margin-bottom: 0.1em;    
+}
+
+.project-extra, .tech-tag {
+    border: 2px solid;
+    border-radius: 15px;
+    padding: 0.4em;
+    margin-top: 0.4em;
+    display: inline-block;
+    font-size: 19px;
+}
+
+.project-extra > i, .tech-tag > i {
+    font-size: 17px;
+}
+
+.figma {
+    color: var(--green);
+}
+
+.bedrock {
+    color: var(--aqua);
+}
+
+.html  {
+    color: var(--orange);
+}
+
+.js, .lambda{
+    color: var(--yellow);
+}
+
+.css {
+    color: var(--purple);
+}
+
+.project-img {
+    aspect-ratio: 16 / 9;
+    transition: transform 800ms cubic-bezier(.27,.97,.35,.85);
+}
+
+.project > .project-img:nth-child(1) {
+    transform: translateX(30%);
+}
+
+.project > .project-img:nth-child(2) {
+    transform: translateX(20%);
+}
+
+.project > .project-img:nth-child(3) {
+    transform: translateX(10%);
+}
+
+.project:hover > .project-card {
+    background-color: var(--bg_current_word);
+}
+
+.project:hover > .project-img:nth-child(1) {
+    transform: translateX(60vw) rotate(-5deg);
+}
+
+.project:hover > .project-img:nth-child(2) {
+    transform: translateX(40vw) rotate(2deg);
+}
+
+.project:hover > .project-img:nth-child(3) {
+    transform: translateX(20vw) rotate(-1deg);
+}
+
