@@ -110,10 +110,41 @@ body {
     background-color: var(--green);
 }
 
+#top-command {
+    overflow: hidden;
+    white-space: nowrap;
+    width: fit-content;
+    animation:
+        typing 1s steps(8, end);
+}
+
+#bottom-command {
+    width: fit-content;
+    padding-right: 1ch;
+    border-right: .325em solid transparent;
+    animation: 
+        caret 1.5s step-end infinite,
+        reveal 1.25s step-end;
+}
+
+@keyframes caret {
+    50% {border-color: var(--fg0);}
+}
+
+@keyframes typing {
+    from {width: 26ch;}
+    to {width: 34ch;}
+}
+
+@keyframes reveal {
+    from {visibility: hidden;}
+}
+
 #neofetch {
     display: flex;
     gap: 32px;
     flex-shrink: 1;
+    animation: reveal 1.25s step-end;
 }
 
 #neofetch > img {
