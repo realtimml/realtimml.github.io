@@ -7,6 +7,8 @@
     --fg0: #d4be98;
     --fg1: #ddc7a1;
     --grey0: #7c6f64;
+    --grey1: #928374;
+    --grey2: #a89984;
     --red: #ea6962;
     --orange: #e78a4e;
     --yellow: #d8a657;
@@ -309,3 +311,32 @@ body {
     transform: translateX(20vw) rotate(-1deg);
 }
 
+
+/* Footer */
+footer {
+    background-color: var(--bg1);
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    font-family: "VT323", monospace;
+    font-size: 20px;
+    color: var(--fg0);
+}
+
+footer > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer > div > p {
+    margin: .1em;
+}
+
+footer > div > p > i {
+    font-size: 15px;
+}
+
+footer > div > p > a {
+    color: var(--grey2);
+}
