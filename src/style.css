@@ -246,6 +246,12 @@ body {
     position: absolute;
     filter: drop-shadow(8px 10px 12px var(--bg_dim));
 }
+.decoration {
+    height: 70%;
+    margin-right: 10vw;
+    right: 0;
+    position: absolute;
+}
 
 .project-card {
     aspect-ratio: 2 / 1.25;
@@ -314,15 +320,15 @@ body {
     transition: transform 800ms cubic-bezier(.27,.97,.35,.85);
 }
 
-.project > .project-img:nth-child(1) {
+.project > .project-img:nth-child(2) {
     transform: translateX(30%);
 }
 
-.project > .project-img:nth-child(2) {
+.project > .project-img:nth-child(3) {
     transform: translateX(20%);
 }
 
-.project > .project-img:nth-child(3) {
+.project > .project-img:nth-child(4) {
     transform: translateX(10%);
 }
 
@@ -330,15 +336,15 @@ body {
     background-color: var(--bg_current_word);
 }
 
-.project:hover > .project-img:nth-child(1) {
+.project:hover > .project-img:nth-child(2) {
     transform: translateX(60vw) rotate(-5deg);
 }
 
-.project:hover > .project-img:nth-child(2) {
+.project:hover > .project-img:nth-child(3) {
     transform: translateX(40vw) rotate(2deg);
 }
 
-.project:hover > .project-img:nth-child(3) {
+.project:hover > .project-img:nth-child(4) {
     transform: translateX(20vw) rotate(-1deg);
 }
 
