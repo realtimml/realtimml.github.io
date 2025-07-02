@@ -70,9 +70,25 @@ body {
 
 /* Terminal */
 #terminal-section {
-    background-color: var(--bg_dim);
     height: 819px;
     position: relative;
+    overflow: hidden;
+}
+
+
+#terminal-background {
+    height: 100%;
+    width: 300%;
+    background-image: url("../assets/imgs/Backgrounds/city.png");
+    background-size: contain;
+    background-repeat: repeat-x;
+    image-rendering: crisp-edges;
+    animation: slide 48s linear infinite;
+}
+
+@keyframes slide {
+  0% { transform: translate(0); }
+  100% { transform: translate(-1200px); }
 }
 
 #terminal-window {
