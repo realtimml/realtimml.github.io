@@ -67,6 +67,11 @@ body {
     text-decoration: none;
 }
 
+#header-buttons > div > a:not([href]) {
+    color: var(--grey2);
+    cursor: not-allowed;
+}
+
 
 /* Terminal */
 #terminal-section {
