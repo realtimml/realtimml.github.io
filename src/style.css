@@ -164,7 +164,6 @@ body {
 #neofetch {
     display: flex;
     gap: 32px;
-    flex-shrink: 1;
     animation: reveal 1.25s step-end;
 }
 
