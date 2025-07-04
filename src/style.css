@@ -397,3 +397,8 @@ footer > div > p > i {
 footer > div > p > a {
     color: var(--grey2);
 }
+@media screen and (max-width: 1300px) {
+    .decoration {
+        visibility: hidden;
+    }
+}
