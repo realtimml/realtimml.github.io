@@ -445,6 +445,41 @@ footer > div > p > a {
     }
 }
 
+@media screen and (max-width: 800px) {   
+    #terminal-section {
+        height: 420px;
+    }
+    
+    #terminal-background {
+        background-image: none;
+        animation: none;
+        background-color: var(--bg_dim);
+    }
+
+    #terminal-window {
+        border-radius: 0px;
+        background: none;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    #window-buttons, #neofetch > img {
+        display: none;
+    }
+
+    #terminal-window > p, .stats-line > span {
+        font-family: "VT323", monospace;
+        font-size: 19px;
+    }
+
+    .stats-line {
+        margin-right: 4ch;
+    }
+}
+
 @media screen and (max-width: 1300px) {
     .decoration {
         visibility: hidden;
