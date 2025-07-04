@@ -29,7 +29,6 @@ body {
 
 /* Header */
 #header-bar {
-    height: 76px;
     font-size: 28px;
     background-color: var(--bg1);
     display: flex;
@@ -38,6 +37,8 @@ body {
     flex-wrap: nowrap;
     padding-left: 10vw;
     padding-right: 10vw;
+    padding-top: 21px;
+    padding-bottom: 21px;
 }
 
 #header-title {
@@ -61,7 +62,11 @@ body {
     gap: 20px;
 }
 
-#header-buttons > div > a {
+#mobile-menu, #mobile-menu-button {
+    display: none;
+}
+
+#header-buttons > div > a, #mobile-menu-button {
     color: var(--fg0);
     font-family: "VT323", monospace;
     text-decoration: none;
@@ -397,6 +402,49 @@ footer > div > p > i {
 footer > div > p > a {
     color: var(--grey2);
 }
+
+
+@media screen and (max-width: 700px) {
+    #header-bar {
+        flex-wrap: wrap;
+        height: fit-content;
+    }
+
+    #header-title, #mobile-menu-button {
+        flex-basis: 50%;
+    }
+
+    #mobile-menu-button {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    #header-buttons {
+        display: none;
+        flex-basis: 100%;
+    }
+
+    #header-sites, #header-sites > a {
+        display: block;
+    }
+
+    #header-sites > a {
+        text-align: right;
+        font-size: 30px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    #header-socials {
+        justify-content: flex-end;
+    }
+
+
+    #mobile-menu:checked ~ div {
+        display: block;
+    }
+}
+
 @media screen and (max-width: 1300px) {
     .decoration {
         visibility: hidden;
