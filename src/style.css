@@ -29,7 +29,6 @@ body {
 
 /* Header */
 #header-bar {
-    height: 76px;
     font-size: 28px;
     background-color: var(--bg1);
     display: flex;
@@ -38,6 +37,8 @@ body {
     flex-wrap: nowrap;
     padding-left: 10vw;
     padding-right: 10vw;
+    padding-top: 21px;
+    padding-bottom: 21px;
 }
 
 #header-title {
@@ -61,7 +62,11 @@ body {
     gap: 20px;
 }
 
-#header-buttons > div > a {
+#mobile-menu, #mobile-menu-button {
+    display: none;
+}
+
+#header-buttons > div > a, #mobile-menu-button {
     color: var(--fg0);
     font-family: "VT323", monospace;
     text-decoration: none;
@@ -266,6 +271,7 @@ body {
     position: absolute;
     filter: drop-shadow(8px 10px 12px var(--bg_dim));
 }
+
 .decoration {
     height: 70%;
     margin-right: 10vw;
@@ -396,4 +402,151 @@ footer > div > p > i {
 
 footer > div > p > a {
     color: var(--grey2);
+}
+
+
+@media screen and (max-width: 400px) {
+    .project {
+        height: 280px;
+    }
+    
+    .project-card {
+        margin-left: 15px;
+    }
+
+    .project-card > h2 {
+        font-size: 25px;
+        margin-top: 12px;
+    }
+
+    .project-card > p, .project-card > h2 > a > i {
+        font-size: 16px;
+    }
+
+    .project-extra > i, .tech-tag > i {
+        font-size: 14px;
+    }
+
+    .project-extra, .tech-tag {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    /* Header */
+    #header-bar {
+        flex-wrap: wrap;
+        height: fit-content;
+    }
+
+    #header-title, #mobile-menu-button {
+        flex-basis: 50%;
+    }
+
+    #mobile-menu-button {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    #header-buttons {
+        display: none;
+        flex-basis: 100%;
+    }
+
+    #header-sites, #header-sites > a {
+        display: block;
+    }
+
+    #header-sites > a {
+        text-align: right;
+        font-size: 30px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    #header-socials {
+        justify-content: flex-end;
+    }
+
+    #mobile-menu:checked ~ div {
+        display: block;
+    }
+
+    /* Footer */
+    footer > div {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 800px) {   
+    #terminal-section {
+        height: 420px;
+    }
+    
+    #terminal-background {
+        background-image: none;
+        animation: none;
+        background-color: var(--bg_dim);
+    }
+
+    #terminal-window {
+        border-radius: 0px;
+        background: none;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    #window-buttons, #neofetch > img {
+        display: none;
+    }
+
+    #terminal-window > p, .stats-line > span {
+        font-family: "VT323", monospace;
+        font-size: 19px;
+    }
+
+    .stats-line {
+        margin-right: 4ch;
+    }
+}
+
+
+@media (pointer:coarse) or (max-width: 1000px) {
+    .project {
+        display: flex;
+        overflow-x: scroll;
+    }
+
+    .project-card, .project-img {
+        position: relative;
+    }
+
+    .project-img {
+        margin-left: 20px;
+    }
+
+    .project > .project-img:nth-child(4) {
+        order: 1;
+    }
+    
+    .project > .project-img:nth-child(3) {
+        order: 2;
+    }
+
+    .project > .project-img:nth-child(2) {
+        order: 3;
+    }
+
+    .project > .project-img:nth-child(n), .project:hover > .project-img:nth-child(n){
+        transform: none;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .decoration {
+        visibility: hidden;
+    }
 }
