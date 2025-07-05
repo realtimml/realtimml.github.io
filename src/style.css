@@ -271,6 +271,7 @@ body {
     position: absolute;
     filter: drop-shadow(8px 10px 12px var(--bg_dim));
 }
+
 .decoration {
     height: 70%;
     margin-right: 10vw;
@@ -404,6 +405,33 @@ footer > div > p > a {
 }
 
 
+@media screen and (max-width: 400px) {
+    .project {
+        height: 280px;
+    }
+    
+    .project-card {
+        margin-left: 15px;
+    }
+
+    .project-card > h2 {
+        font-size: 25px;
+        margin-top: 12px;
+    }
+
+    .project-card > p, .project-card > h2 > a > i {
+        font-size: 16px;
+    }
+
+    .project-extra > i, .tech-tag > i {
+        font-size: 14px;
+    }
+
+    .project-extra, .tech-tag {
+        font-size: 15px;
+    }
+}
+
 @media screen and (max-width: 700px) {
     #header-bar {
         flex-wrap: wrap;
@@ -477,6 +505,38 @@ footer > div > p > a {
 
     .stats-line {
         margin-right: 4ch;
+    }
+}
+
+
+@media (pointer:coarse) or (max-width: 1000px) {
+    .project {
+        display: flex;
+        overflow-x: scroll;
+    }
+
+    .project-card, .project-img {
+        position: relative;
+    }
+
+    .project-img {
+        margin-left: 20px;
+    }
+
+    .project > .project-img:nth-child(4) {
+        order: 1;
+    }
+    
+    .project > .project-img:nth-child(3) {
+        order: 2;
+    }
+
+    .project > .project-img:nth-child(2) {
+        order: 3;
+    }
+
+    .project > .project-img:nth-child(n), .project:hover > .project-img:nth-child(n){
+        transform: none;
     }
 }
 
