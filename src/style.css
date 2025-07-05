@@ -433,6 +433,7 @@ footer > div > p > a {
 }
 
 @media screen and (max-width: 700px) {
+    /* Header */
     #header-bar {
         flex-wrap: wrap;
         height: fit-content;
@@ -467,9 +468,13 @@ footer > div > p > a {
         justify-content: flex-end;
     }
 
-
     #mobile-menu:checked ~ div {
         display: block;
+    }
+
+    /* Footer */
+    footer > div {
+        flex-direction: column;
     }
 }
 
