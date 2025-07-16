@@ -436,7 +436,6 @@ footer > div > p > a {
     /* Header */
     #header-bar {
         flex-wrap: wrap;
-        height: fit-content;
     }
 
     #header-title, #mobile-menu-button {
