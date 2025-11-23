@@ -325,8 +325,12 @@ body {
     color: var(--green);
 }
 
-.bedrock {
+.bedrock, .tailwind {
     color: var(--aqua);
+}
+
+.react, .ts {
+    color: var(--blue);
 }
 
 .html  {
