@@ -14,7 +14,7 @@ export const Route = createRootRoute({
 function RootLayout() {
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-50">
-      <main className="w-full h-full">
+      <main className="w-full">
         <Outlet />
       </main>
 

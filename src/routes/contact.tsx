@@ -6,7 +6,7 @@ export const Route = createFileRoute('/contact')({
 
 function ContactPage() {
   return (
-    <section className="max-w-3xl space-y-5">
+    <section className="min-h-screen w-full bg-[#9EA1D4]">
       <p className="text-sm font-medium uppercase tracking-[0.3em] text-zinc-400">
         Contact
       </p>
