@@ -18,7 +18,7 @@ function RootLayout() {
         <Outlet />
       </main>
 
-      <div className="fixed bottom-0 mb-20 ml-20 flex gap-5 font-semibold text-7xl text-zinc-300 divide-x-4 divide-zinc-300">
+      <div className="fixed bottom-0 mb-20 ml-20 flex gap-5 font-semibold text-7xl text-zinc-200 divide-x-4 divide-zinc-300">
         {navItems.map((item) => (
           <Link
             key={item.to}
