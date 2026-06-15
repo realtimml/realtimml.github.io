@@ -11,6 +11,7 @@ export interface Project {
   description: string
   tags: string[]
   images: string[]
+  submission?: string
   award?: string
   links?: ProjectLink[]
   component?: ComponentType
@@ -28,6 +29,7 @@ export const projects: Project[] = [
       new URL('../assets/imgs/ARrive/ARrive_1.jpg', import.meta.url).href,
       new URL('../assets/imgs/ARrive/ARrive_2.JPG', import.meta.url).href,
     ],
+    submission: 'UCI Designation 2025 Submission',
     links: [
       { label: 'Devpost', href: 'https://devpost.com/software/wip-campus-map-app' },
     ],
@@ -79,6 +81,7 @@ export const projects: Project[] = [
       new URL('../assets/imgs/Roost/Roost_0.png', import.meta.url).href,
       new URL('../assets/imgs/Roost/Roost_1.png', import.meta.url).href,
     ],
+    submission: 'IrvineHacks 2026 Submission',
     links: [
       { label: 'Github Repo', href: 'https://github.com/realtimml/irvinehacks2026' },
       { label: 'Devpost', href: 'https://devpost.com/software/roost' },

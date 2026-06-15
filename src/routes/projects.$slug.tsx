@@ -14,6 +14,7 @@ import {
   RiJavascriptLine,
   RiHtml5Line,
   RiYoutubeFill,
+  RiFlagLine,
 } from 'react-icons/ri'
 import { getProjectBySlug } from '../data/projects'
 import {  SiDevpost, SiOpencv, SiTailwindcss, SiUltralytics, } from 'react-icons/si'
@@ -190,6 +191,13 @@ function ProjectModal() {
               <div className="flex items-center gap-2">
                 <RiTrophyLine className="text-3xl text-black shrink-0" />
                 <span className="text-lg font-semibold text-black">{project.award}</span>
+              </div>
+            )}
+
+            {project.submission && (
+              <div className="flex items-center gap-2">
+                <RiFlagLine className="text-3xl text-black shrink-0" />
+                <span className="text-lg font-semibold text-black">{project.submission}</span>
               </div>
             )}
 
