@@ -57,7 +57,7 @@ export const projects: Project[] = [
     title: 'SnapRec',
     description:
       'A mobile-first AI shopping companion for shampoo/conditioner/skin care etc. Provides personalized production recommendations via Gemini 2.5 Flash.',
-    tags: ['TypeScript', 'React', 'Tailwind'],
+    tags: ['React', 'Tailwind', 'TypeScript', 'Figma'],
     images: [
       new URL('../assets/imgs/SnapRec/1.png', import.meta.url).href,
       new URL('../assets/imgs/SnapRec/2.png', import.meta.url).href,
@@ -92,7 +92,7 @@ export const projects: Project[] = [
     slug: 'jit',
     title: 'J.I.T (Just In Time)',
     description:
-      'An iOS AR education app that uses on-device retrieval augmented generation (RAG) to provide real-time, textbook-grounded study advice, powered by Qwen3 inference and a FastAPI backend for Redis and Cloudinary.',
+      'An iOS AR education app that uses on-device retrieval augmented generation (RAG) to provide real-time, textbook-grounded study advice, powered by local Qwen3 inference and a FastAPI backend for Redis and Cloudinary.',
     tags: ['Swift', 'React', 'TypeScript', 'Figma'],
     images: [
       // new URL('../assets/imgs/JIT/Jit_0.png', import.meta.url).href,
