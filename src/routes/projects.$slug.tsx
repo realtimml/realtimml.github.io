@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { createFileRoute, Link } from '@tanstack/react-router'
+import { useEffect, useState } from 'react'
+import { createFileRoute, Link, useNavigate } from '@tanstack/react-router'
 import {
   RiCloseLargeLine,
   RiArrowLeftSLine,
@@ -101,13 +101,30 @@ function TechStackPills({ tags }: { tags: string[] }) {
 
 function ProjectModal() {
   const { slug } = Route.useParams()
+  const navigate = useNavigate()
   const project = getProjectBySlug(slug)
   const [currentImage, setCurrentImage] = useState(0)
 
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        navigate({ to: '/projects' })
+      }
+    }
+    document.addEventListener('keydown', onKeyDown)
+    return () => document.removeEventListener('keydown', onKeyDown)
+  }, [navigate])
+
   if (!project) {
     return (
-      <div className="fixed inset-0 flex items-center justify-center">
-        <div className="bg-white p-12 text-center space-y-4">
+      <div
+        className="fixed inset-0 flex items-center justify-center z-50"
+        onClick={() => navigate({ to: '/projects' })}
+      >
+        <div
+          className="bg-white p-12 text-center space-y-4"
+          onClick={(e) => e.stopPropagation()}
+        >
           <p className="text-lg font-semibold">Project not found: "{slug}"</p>
           <Link to="/projects" className="text-sm underline">
             Back to projects
@@ -127,9 +144,15 @@ function ProjectModal() {
   }).format(new Date(project.date!))
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center z-50">
+    <div
+      className="fixed inset-0 flex items-center justify-center z-50"
+      onClick={() => navigate({ to: '/projects' })}
+    >
       {/* Modal card */}
-      <div className="bg-white w-[82vw] max-w-[1200px] max-h-[88vh] overflow-y-auto relative">
+      <div
+        className="bg-white w-[82vw] max-w-[1200px] max-h-[88vh] overflow-y-auto relative"
+        onClick={(e) => e.stopPropagation()}
+      >
         {/* Close button */}
         <Link
           to="/projects"
