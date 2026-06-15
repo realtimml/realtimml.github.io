@@ -8,13 +8,19 @@ import {
   RiGithubFill,
   RiLinkedinBoxFill,
   RiExternalLinkLine,
-  RiMedalLine,
   RiReactjsLine,
+  RiFigmaLine,
+  RiCss3Line,
+  RiJavascriptLine,
+  RiHtml5Line,
+  RiYoutubeFill,
 } from 'react-icons/ri'
 import { getProjectBySlug } from '../data/projects'
-import {  SiDevpost, SiTailwindcss, } from 'react-icons/si'
-import { TbBrandTypescript } from 'react-icons/tb'
-import { DiSwift } from 'react-icons/di'
+import {  SiDevpost, SiOpencv, SiTailwindcss, SiUltralytics, } from 'react-icons/si'
+import { TbBrandTypescript, TbLambda } from 'react-icons/tb'
+import { DiPython, DiSwift } from 'react-icons/di'
+import { LuBrainCircuit } from 'react-icons/lu'
+import { FaAws } from 'react-icons/fa'
 
 export const Route = createFileRoute('/projects/$slug')({
   component: ProjectModal,
@@ -24,13 +30,25 @@ const TAG_ICONS: Record<string, React.ReactNode> = {
   React: <RiReactjsLine className="text-2xl" />,
   TypeScript: <TbBrandTypescript className="text-2xl" />,
   Tailwind: <SiTailwindcss className="text-2xl" />,
+  Figma: <RiFigmaLine className="text-2xl" />,
   Swift: <DiSwift className="text-3xl" />,
+  HTML: <RiHtml5Line className="text-2xl" />,
+  JavaScript: <RiJavascriptLine className="text-2xl" />,
+  CSS: <RiCss3Line className="text-2xl" />,
+  'HTML/JS/CSS': <RiHtml5Line className="text-2xl" />,
+  'AWS Lambda': <TbLambda className="text-2xl" />,
+  'AWS Bedrock': <LuBrainCircuit className="text-2xl" />,
+  'AWS API Gateway': <FaAws className="text-2xl" />,
+  Python: <DiPython className="text-2xl" />,
+  OpenCV: <SiOpencv className="text-2xl" />,
+  Ultralytics: <SiUltralytics className="text-2xl" />,
 }
 
 const LINK_ICONS: Record<string, React.ReactNode> = {
   'Github Repo': <RiGithubFill className="text-4xl" />,
   'Linkedin Post': <RiLinkedinBoxFill className="text-4xl" />,
   Devpost: <SiDevpost className="text-3xl" />,
+  Youtube: <RiYoutubeFill className="text-4xl" />,
   default: <RiExternalLinkLine className="text-4xl" />,
 }
 
