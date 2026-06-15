@@ -1,6 +1,6 @@
 import { createFileRoute, Link, Outlet, useChildMatches } from '@tanstack/react-router'
 import { projects } from '../data/projects'
-import { RiArrowDownSLine } from 'react-icons/ri'
+import { RiArrowDownSLine, RiTrophyFill } from 'react-icons/ri'
 
 export const Route = createFileRoute('/projects')({
   component: ProjectsPage,
@@ -18,8 +18,9 @@ function ProjectsPage() {
         </div>
         <div className="grid grid-cols-3 gap-4 px-12">
           {projects.map((project) => (
-            <Link key={project.slug} to={`/projects/${project.slug}`}>
-              <img src={project.images[0]} alt={project.title} />
+            <Link key={project.slug} to={`/projects/${project.slug}`} className="relative block">
+              <img src={project.images[0]} alt={project.title} className="w-full" />
+              {project.award && <RiTrophyFill className="absolute bottom-4 right-4 text-3xl text-yellow-200" />}
             </Link>
           ))}
         </div>
