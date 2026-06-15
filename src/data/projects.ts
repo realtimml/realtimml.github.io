@@ -11,6 +11,7 @@ export interface Project {
   description: string
   tags: string[]
   images: string[]
+  date?: string
   submission?: string
   award?: string
   links?: ProjectLink[]
@@ -30,6 +31,7 @@ export const projects: Project[] = [
       new URL('../assets/imgs/ARrive/ARrive_2.JPG', import.meta.url).href,
     ],
     submission: 'UCI Designation 2025 Submission',
+    date: '2025-04-20',
     links: [
       { label: 'Devpost', href: 'https://devpost.com/software/wip-campus-map-app' },
     ],
@@ -46,6 +48,7 @@ export const projects: Project[] = [
       new URL('../assets/imgs/Jotstack/Jotstack_3.png', import.meta.url).href,
     ],
     award: 'Productivity Track Winner @ AI@UCI AWS CloudHacks 2025',
+    date: '2025-05-11',
     links: [
       { label: 'Devpost', href: 'https://devpost.com/software/jotstack' },
       { label: 'Github Repo', href: 'https://github.com/kennethyandell/uci-cloudhacks-2025' },
@@ -64,6 +67,7 @@ export const projects: Project[] = [
       new URL('../assets/imgs/SnapRec/3.jpg', import.meta.url).href,
     ],
     award: '1st Place Winner @ UCI WebJam 2025',
+    date: '2025-11-07',
     links: [
       { label: 'Devpost', href: 'https://devpost.com/software/snaprec' },
       { label: 'Github Repo', href: 'https://github.com/AntonK0/webjam2025' },
@@ -82,6 +86,7 @@ export const projects: Project[] = [
       new URL('../assets/imgs/Roost/Roost_1.png', import.meta.url).href,
     ],
     submission: 'IrvineHacks 2026 Submission',
+    date: '2026-03-01',
     links: [
       { label: 'Github Repo', href: 'https://github.com/realtimml/irvinehacks2026' },
       { label: 'Devpost', href: 'https://devpost.com/software/roost' },
@@ -99,6 +104,7 @@ export const projects: Project[] = [
       new URL('../assets/imgs/MAGI/1.png', import.meta.url).href,
     ],
     submission: 'AI@UCI AWS CloudHacks 2026 Submission',
+    date: '2026-04-22',
     links: [
       { label: 'Github Repo', href: 'https://github.com/kennethyandell/cloudhacks2026' },
       { label: 'Devpost', href: 'https://devpost.com/software/magi-lxb0ne' }
@@ -117,6 +123,7 @@ export const projects: Project[] = [
       new URL('../assets/imgs/JIT/Jit_3.jpg', import.meta.url).href,
     ],
     award: 'Best Use of MongoDB Atlas Track Winner @ LA Hacks 2026',
+    date: '2026-04-26',
     links: [
       { label: 'Devpost', href: 'https://devpost.com/software/j-i-t' },
       { label: 'Github Repo', href: 'https://github.com/AntonK0/lahacks26' },

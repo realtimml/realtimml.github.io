@@ -121,6 +121,11 @@ function ProjectModal() {
   const hasPrev = currentImage > 0
   const hasNext = currentImage < images.length - 1
 
+  const formattedDate = new Intl.DateTimeFormat('en-US', {
+    year: 'numeric',
+    month: 'long',
+  }).format(new Date(project.date!))
+
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50">
       {/* Modal card */}
@@ -184,7 +189,6 @@ function ProjectModal() {
           {/* Project info */}
           <div className="flex-1 px-8 pt-8 flex flex-col gap-5 min-w-[260px] md:min-h-[420px]">
             <h1 className="text-4xl font-bold text-black leading-tight">{project.title}</h1>
-
             <p className="text-md leading-6 text-black">{project.description}</p>
 
             {/* Award badge */}
@@ -206,28 +210,32 @@ function ProjectModal() {
           </div>
         </div>
 
-        {/* Links section */}
-        {project.links && project.links.length > 0 && (
-          <div className="px-8 pb-8 pt-4">
-            {/* <h2 className="text-3xl font-semibold text-black mb-5">Links</h2> */}
-            <div className="flex flex-wrap gap-8">
-              {project.links.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-black hover:opacity-70 transition-opacity"
-                >
-                  {getLinkIcon(link.label)}
-                  <span className="text-xl font-medium underline underline-offset-2">
-                    {link.label}
-                  </span>
-                </a>
-              ))}
+        <div className="flex justify-between items-center pr-8">
+          {/* Links section */}
+          {project.links && project.links.length > 0 && (
+            <div className="px-8 pb-8 pt-4">
+              {/* <h2 className="text-3xl font-semibold text-black mb-5">Links</h2> */}
+              <div className="flex flex-wrap gap-8">
+                {project.links.map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-black hover:opacity-70 transition-opacity"
+                  >
+                    {getLinkIcon(link.label)}
+                    <span className="text-xl font-medium underline underline-offset-2">
+                      {link.label}
+                    </span>
+                  </a>
+                ))}
+              </div>
             </div>
-          </div>
-        )}
+          )}
+          {/* Date*/}
+          <span className="text-lg font-semibold text-black">{formattedDate}</span>
+        </div>
       </div>
     </div>
   )
