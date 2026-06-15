@@ -1,7 +1,7 @@
 import { Link, Outlet, createRootRoute, useRouterState } from '@tanstack/react-router'
 
 const navItems = [
-  // { to: '/', label: 'Home' },
+  { to: '/', label: 'Home' },
   { to: '/about', label: 'About Me' },
   { to: '/projects', label: 'Projects' },
   { to: '/contact', label: 'Contact' },

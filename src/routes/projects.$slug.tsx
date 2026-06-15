@@ -170,7 +170,7 @@ function ProjectModal() {
             {/* Award badge */}
             {project.award && (
               <div className="flex items-center gap-2">
-                <RiTrophyLine className="text-2xl text-black shrink-0" />
+                <RiTrophyLine className="text-3xl text-black shrink-0" />
                 <span className="text-lg font-semibold text-black">{project.award}</span>
               </div>
             )}
