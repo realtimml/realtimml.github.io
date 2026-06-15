@@ -107,7 +107,8 @@ export const projects: Project[] = [
     date: '2026-04-22',
     links: [
       { label: 'Github Repo', href: 'https://github.com/kennethyandell/cloudhacks2026' },
-      { label: 'Devpost', href: 'https://devpost.com/software/magi-lxb0ne' }
+      { label: 'Devpost', href: 'https://devpost.com/software/magi-lxb0ne' },
+      { label: 'Linkedin Post', href: 'https://www.linkedin.com/posts/kenneth-yandell_cloudhacks2026-uci-awsbedrock-activity-7451901110178717696-VgDk' },
     ],
   },
   {
