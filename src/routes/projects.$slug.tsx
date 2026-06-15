@@ -43,6 +43,7 @@ const TAG_ICONS: Record<string, React.ReactNode> = {
   Python: <DiPython className="text-2xl" />,
   OpenCV: <SiOpencv className="text-2xl" />,
   Ultralytics: <SiUltralytics className="text-2xl" />,
+  DynamoDB: <FaAws className="text-2xl" />,
 }
 
 const LINK_ICONS: Record<string, React.ReactNode> = {

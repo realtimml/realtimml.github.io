@@ -89,6 +89,22 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: 'magi',
+    title: 'MAGI',
+    description:
+      'A multi-agent AWS system that orchestrates an LLM swarm for consensus-driven prompt resolution, managed via a real-time React dashboard. Inspired by Neon Genesis Evangelion.',
+    tags: ['React', 'TypeScript', 'Tailwind', 'AWS Bedrock', 'AWS Lambda', 'DynamoDB'],
+    images: [
+      new URL('../assets/imgs/MAGI/2.png', import.meta.url).href,
+      new URL('../assets/imgs/MAGI/1.png', import.meta.url).href,
+    ],
+    submission: 'AI@UCI AWS CloudHacks 2026 Submission',
+    links: [
+      { label: 'Github Repo', href: 'https://github.com/kennethyandell/cloudhacks2026' },
+      { label: 'Devpost', href: 'https://devpost.com/software/magi-lxb0ne' }
+    ],
+  },
+  {
     slug: 'jit',
     title: 'J.I.T (Just In Time)',
     description:
