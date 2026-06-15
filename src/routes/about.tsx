@@ -6,7 +6,7 @@ export const Route = createFileRoute('/about')({
 
 function AboutPage() {
   return (
-    <section className="min-h-screen w-full bg-[#F1F7B5]">
+    <section className="min-h-screen w-full">
       <p className="text-sm font-medium uppercase tracking-[0.3em] text-zinc-400">
         About
       </p>
