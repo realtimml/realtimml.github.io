@@ -1,19 +1,33 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { RiGithubFill, RiLinkedinBoxFill, RiMailFill } from "react-icons/ri";
 
-export const Route = createFileRoute('/contact')({
+export const Route = createFileRoute("/contact")({
   component: ContactPage,
-})
+});
 
 function ContactPage() {
+  const encoded = "dGltbXlwaGFuMDY2QGdtYWlsLmNvbQ==";
+
   return (
-    <section className="min-h-screen w-full bg-[#9EA1D4]">
-      <p className="text-sm font-medium uppercase tracking-[0.3em] text-zinc-400">
-        Contact
-      </p>
-      <h1 className="text-4xl font-bold tracking-tight text-white">Get in touch</h1>
-      <p className="text-lg leading-8 text-zinc-300">
-        Add your preferred contact links here, such as email, GitHub, LinkedIn, or a resume.
-      </p>
+    <section className="min-h-screen w-full bg-[#9EA1D4] px-28 pt-20">
+      <Link className="flex justify-between" to="https://github.com/realtimml">
+        <RiGithubFill className="w-40 h-40" />
+        <span className="text-9xl font-bold">GitHub</span>
+      </Link>
+      <Link className="flex justify-between" to="https://www.linkedin.com/in/timmy-p/">
+        <RiLinkedinBoxFill className="w-40 h-40" />
+        <span className="text-9xl font-bold">LinkedIn</span>
+      </Link>
+      <Link
+        className="flex justify-between"
+        onClick={(e) => {
+          e.preventDefault();
+          window.location.href = `mailto:${atob(encoded)}`;
+        }}
+      >
+        <RiMailFill className="w-40 h-40" />
+        <span className="text-9xl font-bold">Email</span>
+      </Link>
     </section>
-  )
+  );
 }
