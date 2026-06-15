@@ -41,8 +41,8 @@ export const projects: Project[] = [
       'AI-powered interactive whiteboarding app for brainstorming and ideas. Features AI-generated sticky note suggestions via Claude 3.5 Haiku.',
     tags: ['AWS Bedrock', 'AWS Lambda', 'Python', 'AWS API Gateway', 'HTML', 'JavaScript', 'CSS'],
     images: [
-      new URL('../assets/imgs/Jotstack/Jotstack_0.png', import.meta.url).href,
-      new URL('../assets/imgs/Jotstack/Jotstack_1.png', import.meta.url).href,
+      new URL('../assets/imgs/Jotstack/Jotstack_4.png', import.meta.url).href,
+      new URL('../assets/imgs/Jotstack/Jotstack_5.png', import.meta.url).href,
       new URL('../assets/imgs/Jotstack/Jotstack_3.png', import.meta.url).href,
     ],
     award: 'Productivity Track Winner @ AI@UCI AWS CloudHacks 2025',
