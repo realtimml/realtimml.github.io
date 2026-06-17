@@ -10,9 +10,14 @@ interface ProjectCardProps {
 
 export function ProjectCard({ slug, imageUrl, title, award }: ProjectCardProps) {
   return (
-    <Link to={`/projects/${slug}`} className="relative block">
+    <Link to={`/projects/${slug}`} className="relative block hover:scale-95 transition-transform duration-300 group overflow-hidden">
+      <div className='absolute w-full aspect-video bg-white flex items-center justify-center -translate-x-full group-hover:translate-x-0 transition-transform duration-300'>
+        <p className='text-5xl font-bold text-[#bed2d2]'>{title}</p>
+      </div>
       <img src={imageUrl} alt={title} className="w-full" />
-      {award && <RiTrophyFill className="absolute bottom-4 right-4 text-3xl text-yellow-200" />}
+      {award && (
+        <RiTrophyFill className="absolute bottom-4 right-4 text-3xl text-[#F1F7B5] drop-shadow-sm group-hover:text-[#bed2d2] transition-colors duration-200" />
+      )}
     </Link>
-  )
+  );
 }
