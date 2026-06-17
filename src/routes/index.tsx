@@ -6,25 +6,11 @@ export const Route = createFileRoute('/')({
 
 function HomePage() {
   return (
-    <section className="space-y-8">
-      <div className="space-y-4">
-        <p className="text-sm font-medium uppercase tracking-[0.3em] text-zinc-400">
-          Portfolio
-        </p>
-        <h1 className="max-w-3xl text-5xl font-bold tracking-tight text-white">
-          Building interactive systems, creative tools, and real-time web experiences.
-        </h1>
-        <p className="max-w-2xl text-lg text-zinc-300">
-          A compact home for selected projects, experiments, and ways to get in touch.
-        </p>
+    <section className="min-h-screen w-full bg-[url(src/assets/imgs/Backgrounds/sky.jpg)] bg-cover bg-position-[100%_20%] brightness-90">
+      <div className="absolute top-16 right-17">
+        <h1 className="text-8xl font-bold text-white">Timmy Phan</h1>
+        <h2 className="text-4xl font-bold text-white text-right mt-2">Software Dev. @ Irvine, CA</h2>
       </div>
-
-      <Link
-        to="/projects"
-        className="inline-flex rounded-full bg-white px-5 py-3 text-sm font-semibold text-zinc-950 transition hover:bg-zinc-200"
-      >
-        View Projects
-      </Link>
     </section>
   )
 }
