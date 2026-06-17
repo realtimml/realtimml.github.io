@@ -15,12 +15,13 @@ function AboutPage() {
           <div>
             <p>Timmy Phan</p>
             <span>-------------------------------------------</span>
-            <p>bio: Hello, I am a 2nd year CS student whose trying out a little bit of everything!</p>
+            <p>bio: Hello, I am a 3rd year CS student whose trying out a little bit of everything!</p>
+            <p>location: Irvine, CA</p>
             <p>pronouns: he/him</p>
             <p>university: University of California, Irvine</p>
             <p>degree: Computer Science B.S.</p>
-            <p>technologies: Python, HTML/JS/CSS</p>
-            <p>learning: React, TypeScript, Figma</p>
+            <p>interests: Frontend Development, UI/UX Design, AI, Machine Learning</p>
+            <p>technologies: Python, HTML/JS/CSS, React, TypeScript, Figma</p>
           </div>
         </div>
         <p>remote-user@timml.net ~ %</p>
