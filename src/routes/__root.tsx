@@ -23,7 +23,7 @@ function RootLayout() {
       </main>
 
       <div
-        className={`fixed bottom-0 mb-20 ml-20 flex gap-5 font-semibold text-7xl text-zinc-200 divide-x-4 divide-zinc-300 transition-opacity duration-300 ${isProjectModalOpen ? 'opacity-25 pointer-events-none' : ''}`}
+        className={`fixed bottom-0 mb-20 ml-20 flex gap-5 font-semibold text-7xl text-white/75 divide-x-4 divide-white/75 transition-opacity duration-300 ${isProjectModalOpen ? 'opacity-25 pointer-events-none' : ''}`}
       >
         {navItems.map((item) => (
           <Link
