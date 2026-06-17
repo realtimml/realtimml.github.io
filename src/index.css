@@ -3,4 +3,22 @@
 
 @theme {
     --font-monospace: "VT323", monospace;
+
+    --animate-typing: typing 0.5s steps(8, end);
+    --animate-caret: caret 1.5s step-end infinite;
+    --animate-reveal: reveal 0.75s step-end both;
+    --animate-caret-reveal: caret 1.5s step-end infinite, reveal 0.75s step-end both;
+
+    @keyframes typing {
+        from { width: 26ch; }
+        to { width: 34ch; }
+    }
+
+    @keyframes caret {
+        50% { border-color: currentColor; }
+    }
+
+    @keyframes reveal {
+        from { visibility: hidden; }
+    }
 }
