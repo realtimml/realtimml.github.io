@@ -1,9 +1,9 @@
-import { createFileRoute } from '@tanstack/react-router'
-import doodle from '../assets/imgs/Doodles/me.png'
+import { createFileRoute } from "@tanstack/react-router";
+import doodle from "../assets/imgs/Doodles/me.png";
 
-export const Route = createFileRoute('/about')({
+export const Route = createFileRoute("/about")({
   component: AboutPage,
-})
+});
 
 function AboutPage() {
   return (
@@ -17,13 +17,37 @@ function AboutPage() {
           <div>
             <p>Timmy Phan</p>
             <span>-------------------------------------------</span>
-            <p>bio: Hello, I am a 3rd year CS student whose trying out a little bit of everything!</p>
-            <p>location: Irvine, CA</p>
-            <p>pronouns: he/him</p>
-            <p>university: University of California, Irvine</p>
-            <p>degree: Computer Science B.S.</p>
-            <p>interests: Frontend Development, UI/UX Design, AI, Machine Learning</p>
-            <p>technologies: Python, HTML/JS/CSS, React, TypeScript, Figma</p>
+            <div className="flex gap-[1ch]">
+              <span>bio:</span>
+              <p>
+                Hello, I am a 3rd year CS student whose trying out a little bit
+                of everything!
+              </p>
+            </div>
+            <div className="flex gap-[1ch]">
+              <span>location:</span>
+              <p>Irvine, CA</p>
+            </div>
+            <div className="flex gap-[1ch]">
+              <span>pronouns:</span>
+              <p>he/him</p>
+            </div>
+            <div className="flex gap-[1ch]">
+              <span>university:</span>
+              <p>University of California, Irvine</p>
+            </div>
+            <div className="flex gap-[1ch]">
+              <span>degree:</span>
+              <p>Computer Science B.S.</p>
+            </div>
+            <div className="flex gap-[1ch]">
+              <span>interests:</span>
+              <p>Frontend Development, UI/UX Design, AI, Machine Learning</p>
+            </div>
+            <div className="flex gap-[1ch]">
+              <span>technologies:</span>
+              <p>Python, HTML/JS/CSS, React, TypeScript, Figma</p>
+            </div>
           </div>
         </div>
         <p className="w-fit border-r-7 border-r-transparent pr-[1ch] animate-caret-reveal">
@@ -31,5 +55,5 @@ function AboutPage() {
         </p>
       </div>
     </section>
-  )
+  );
 }
