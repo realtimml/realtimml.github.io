@@ -14,12 +14,16 @@ export function ImageCarousel({ images, alt }: ImageCarouselProps) {
 
   return (
     <div className="relative flex-2 self-start bg-zinc-100 aspect-video overflow-hidden">
-      <img
-        key={currentImage}
-        src={images[currentImage]}
-        alt={`${alt} screenshot ${currentImage + 1}`}
-        className="w-full h-full object-cover"
-      />
+      {images.map((src, i) => (
+        <img
+          key={src}
+          src={src}
+          alt={`${alt} screenshot ${i + 1}`}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
+            i === currentImage ? 'opacity-100' : 'opacity-0'
+          }`}
+        />
+      ))}
       {/* Prev arrow */}
       {hasPrev && (
         <button
