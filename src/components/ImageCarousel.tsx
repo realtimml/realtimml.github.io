@@ -13,7 +13,7 @@ export function ImageCarousel({ images, alt }: ImageCarouselProps) {
   const hasNext = currentImage < images.length - 1
 
   return (
-    <div className="relative flex-2 bg-zinc-100 min-h-[320px] md:min-h-[420px] overflow-hidden">
+    <div className="relative flex-2 self-start bg-zinc-100 aspect-video overflow-hidden">
       <img
         key={currentImage}
         src={images[currentImage]}

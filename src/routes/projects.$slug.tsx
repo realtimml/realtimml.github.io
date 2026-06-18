@@ -71,12 +71,12 @@ function ProjectModal() {
 
   return (
     <div
-      className="fixed inset-0 flex items-center justify-center z-50"
+      className="fixed inset-0 z-50 flex sm:items-center sm:justify-center"
       onClick={() => navigate({ to: '/projects' })}
     >
       {/* Modal card */}
       <div
-        className="bg-white w-[82vw] max-w-[1200px] max-h-[88vh] overflow-y-auto relative"
+        className="relative flex h-full w-full flex-col overflow-hidden bg-white sm:block sm:h-auto sm:max-h-[88vh] sm:w-[82vw] sm:max-w-[1200px] sm:overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close button */}
@@ -88,40 +88,42 @@ function ProjectModal() {
           <RiCloseLargeLine className="text-3xl" />
         </Link>
 
-        {/* Top section: carousel + info */}
-        <div className="flex flex-col md:flex-row pt-16 pb-2 px-9">
-          <ImageCarousel images={project.images} alt={project.title} />
+        {/* Scrollable content — footer stays pinned below on small screens */}
+        <div className="min-h-0 flex-1 overflow-y-auto sm:overflow-visible sm:flex-none">
+          <div className="flex flex-col xl:flex-row pt-16 pb-2 px-9">
+            <ImageCarousel images={project.images} alt={project.title} />
 
-          {/* Project info */}
-          <div className="flex-1 px-8 pt-8 flex flex-col gap-5 min-w-[260px] md:min-h-[420px]">
-            <h1 className="text-4xl font-bold text-black leading-tight">{project.title}</h1>
-            <p className="text-md leading-6 text-black">{project.description}</p>
+            {/* Project info */}
+            <div className="flex-1 sm:px-8 pt-8 flex flex-col gap-5">
+              <h1 className="text-4xl font-bold text-black leading-tight">{project.title}</h1>
+              <p className="text-md leading-6 text-black">{project.description}</p>
 
-            {/* Award badge */}
-            {project.award && (
-              <div className="flex items-center gap-2">
-                <RiTrophyLine className="text-3xl text-black shrink-0" />
-                <span className="text-lg font-semibold text-black">{project.award}</span>
-              </div>
-            )}
+              {/* Award badge */}
+              {project.award && (
+                <div className="flex items-center gap-2">
+                  <RiTrophyLine className="text-3xl text-black shrink-0" />
+                  <span className="text-lg font-semibold text-black">{project.award}</span>
+                </div>
+              )}
 
-            {project.submission && (
-              <div className="flex items-center gap-2">
-                <RiFlagLine className="text-3xl text-black shrink-0" />
-                <span className="text-lg font-semibold text-black">{project.submission}</span>
-              </div>
-            )}
+              {project.submission && (
+                <div className="flex items-center gap-2">
+                  <RiFlagLine className="text-3xl text-black shrink-0" />
+                  <span className="text-lg font-semibold text-black">{project.submission}</span>
+                </div>
+              )}
 
-            <TechStackPills tags={project.tags} />
+              <TechStackPills tags={project.tags} />
+            </div>
           </div>
         </div>
 
-        <div className="flex justify-between items-center pr-8">
+        <div className="flex shrink-0 justify-between items-center px-9 pb-8 pt-4 xl:px-0 xl:pr-8 sm:pb-0 sm:pt-0">
           {/* Links section */}
           {project.links && project.links.length > 0 && (
-            <div className="px-8 pb-8 pt-4">
+            <div className="sm:px-8 sm:pb-8 sm:pt-4">
               {/* <h2 className="text-3xl font-semibold text-black mb-5">Links</h2> */}
-              <div className="flex flex-wrap gap-8">
+              <div className="flex flex-wrap gap-2 xl:gap-8">
                 {project.links.map((link) => (
                   <a
                     key={link.label}
@@ -131,7 +133,7 @@ function ProjectModal() {
                     className="flex items-center gap-2 text-black hover:opacity-70 transition-opacity"
                   >
                     {getLinkIcon(link.label)}
-                    <span className="text-xl font-medium underline underline-offset-2">
+                    <span className="hidden xl:inline text-xl font-medium underline underline-offset-2">
                       {link.label}
                     </span>
                   </a>

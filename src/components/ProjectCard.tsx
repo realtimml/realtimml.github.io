@@ -12,7 +12,7 @@ export function ProjectCard({ slug, imageUrl, title, award }: ProjectCardProps) 
   return (
     <Link to={`/projects/${slug}`} className="relative block hover:scale-95 transition-transform duration-300 group overflow-hidden">
       <div className='absolute w-full aspect-video bg-white flex items-center justify-center -translate-x-full group-hover:translate-x-0 transition-transform duration-300'>
-        <p className='text-5xl font-bold text-[#bed2d2]'>{title}</p>
+        <p className='text-5xl text-center font-bold text-[#bed2d2]'>{title}</p>
       </div>
       <img src={imageUrl} alt={title} className="w-full" />
       {award && (

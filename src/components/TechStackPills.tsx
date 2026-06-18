@@ -31,7 +31,7 @@ const TAG_ICONS: Record<string, React.ReactNode> = {
 }
 
 const pillClassName =
-  'flex items-center gap-1.5 border-2 border-[#1e1e1e] rounded-full px-3 py-1 text-xl font-medium text-[#1e1e1e]'
+  'flex items-center gap-1.5 border-2 border-[#1e1e1e] rounded-full px-3 py-1 sm:text-xl font-medium text-[#1e1e1e]'
 
 export function TechStackPills({ tags }: { tags: string[] }) {
   if (tags.length === 0) return null
@@ -39,7 +39,7 @@ export function TechStackPills({ tags }: { tags: string[] }) {
   // Figma layout: first tag on its own row, remaining tags on the row below
   if (tags.length <= 3) {
     return (
-      <div className="mt-auto pt-4 flex flex-col items-start gap-2">
+      <div className="pt-4 flex flex-col items-start gap-2">
         <span className={pillClassName}>
           {TAG_ICONS[tags[0]] ?? null}
           {tags[0]}
@@ -60,7 +60,7 @@ export function TechStackPills({ tags }: { tags: string[] }) {
 
   // 4+ tags: all pills wrap naturally based on column width
   return (
-    <div className="mt-auto pt-4 flex flex-wrap gap-2">
+    <div className="pt-4 flex flex-wrap gap-2">
       {tags.map((tag) => (
         <span key={tag} className={pillClassName}>
           {TAG_ICONS[tag] ?? null}
