@@ -36,7 +36,14 @@ export function NeofetchCard() {
         </div>
         <div className="flex gap-[1ch]">
           <span>technologies:</span>
-          <p>Python, HTML/JS/CSS, React, TypeScript, Figma</p>
+          <div className="inline-block">
+            <span className="underline decoration-dotted decoration-2 underline-offset-5">Python</span><span>, </span>
+            <span className="underline decoration-dotted decoration-2 underline-offset-5">HTML/JS/CSS</span><span>, </span>
+            <span className="underline decoration-dotted decoration-2 underline-offset-5">React</span><span>, </span>
+            <span className="underline decoration-dotted decoration-2 underline-offset-5">TypeScript</span><span>, </span>
+            <span className="underline decoration-dotted decoration-2 underline-offset-5">Tailwind</span><span>, </span>
+            <span className="underline decoration-dotted decoration-2 underline-offset-5">Figma</span><span>.</span>
+          </div>
         </div>
       </div>
     </div>
