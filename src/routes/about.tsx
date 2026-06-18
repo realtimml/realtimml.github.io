@@ -8,7 +8,7 @@ export const Route = createFileRoute("/about")({
 function AboutPage() {
   return (
     <section className="min-h-screen w-full bg-[url(src/assets/imgs/Backgrounds/ground.jpg)] bg-cover bg-position-[100%_30%] brightness-80">
-      <div className="min-h-screen backdrop-blur-2xl md:backdrop-blur-md px-6 sm:px-28 py-20 font-monospace text-[19px] lg:text-2xl">
+      <div className="min-h-screen backdrop-blur-2xl md:backdrop-blur-md px-6 sm:px-12 xl:px-28 py-20 font-monospace text-[19px] md:text-2xl">
         <p className="w-fit overflow-hidden whitespace-nowrap animate-typing">
           remote-user@timml.net ~ % neofetch
         </p>
