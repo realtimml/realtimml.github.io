@@ -5,7 +5,11 @@ import './index.css'
 
 import { routeTree } from './routeTree.gen'
 
-const router = createRouter({ routeTree, defaultViewTransition: true })
+const router = createRouter({
+  routeTree,
+  defaultViewTransition: true,
+  basepath: '/',
+})
 
 declare module '@tanstack/react-router' {
   interface Register {
