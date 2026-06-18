@@ -42,7 +42,7 @@ export function BottomNav() {
     <>
       <div
           aria-hidden
-          className="pointer-events-none fixed inset-x-0 top-128 bottom-0 bg-gradient-to-t from-black/55 via-black/35 to-transparent"
+          className="pointer-events-none fixed inset-x-0 h-50 bottom-0 bg-linear-to-t from-black/70 sm:from-black/55 via-black/55 sm:via-black/10 to-transparent"
         />
       <nav
         ref={navRef}
