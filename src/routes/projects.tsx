@@ -4,8 +4,12 @@ import { projects } from '../data/projects'
 import { FilterDropdown, defaultFilters } from '../components/FilterDropdown'
 import { ProjectCard } from '../components/ProjectCard'
 import type { Filters } from '../components/FilterDropdown'
+import { preloadImage } from '../utils/preloadImage'
 
 export const Route = createFileRoute('/projects')({
+  loader: () => {
+    projects.forEach((p) => preloadImage(p.images[0]))
+  },
   component: ProjectsPage,
 })
 
