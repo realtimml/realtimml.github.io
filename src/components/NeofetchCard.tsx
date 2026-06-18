@@ -2,8 +2,8 @@ import doodle from '../assets/imgs/Doodles/me.png'
 
 export function NeofetchCard() {
   return (
-    <div className="flex items-center gap-2 animate-reveal">
-      <img src={doodle} alt="Timmy Phan" className="w-100 h-100" />
+    <div className="flex items-center gap-2 animate-reveal leading-6 my-[1ch] md:my-0">
+      <img src={doodle} alt="Timmy Phan" className="hidden md:block lg:w-100 lg:h-100 w-70 h-70" />
       <div>
         <p>Timmy Phan</p>
         <span>-------------------------------------------</span>
