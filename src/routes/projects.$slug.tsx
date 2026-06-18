@@ -56,7 +56,7 @@ function ProjectModal() {
           onClick={(e) => e.stopPropagation()}
         >
           <p className="text-lg font-semibold">Project not found: "{slug}"</p>
-          <Link to="/projects" className="text-sm underline" viewTransition={['vt-fade-in']}>
+          <Link to="/projects" className="text-sm underline" viewTransition={{ types: ['vt-fade-in'] }}>
             Back to projects
           </Link>
         </div>

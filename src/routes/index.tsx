@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from '@tanstack/react-router'
+import { createFileRoute } from '@tanstack/react-router'
 import skyBg from '../assets/imgs/Backgrounds/sky.jpg'
 import { preloadImage } from '../utils/preloadImage'
 
