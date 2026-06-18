@@ -16,11 +16,11 @@ function getActiveNavTo(pathname: string) {
   return match?.to ?? pathname
 }
 
-function scrollLinkIntoView(link: HTMLElement) {
-  link.scrollIntoView({
+function scrollLinkIntoView(link: HTMLElement, container: HTMLElement) {
+  const paddingLeft = Number.parseFloat(getComputedStyle(container).paddingLeft)
+  container.scrollTo({
+    left: link.offsetLeft - paddingLeft,
     behavior: 'smooth',
-    inline: 'nearest',
-    block: 'nearest',
   })
 }
 
@@ -32,10 +32,11 @@ export function BottomNav() {
   })
 
   useEffect(() => {
-    const activeLink = navRef.current?.querySelector<HTMLElement>(
+    const nav = navRef.current
+    const activeLink = nav?.querySelector<HTMLElement>(
       `[data-nav-to="${getActiveNavTo(pathname)}"]`,
     )
-    if (activeLink) scrollLinkIntoView(activeLink)
+    if (nav && activeLink) scrollLinkIntoView(activeLink, nav)
   }, [pathname])
 
   return (
@@ -55,7 +56,9 @@ export function BottomNav() {
             data-nav-to={item.to}
             activeProps={{ className: 'text-white' }}
             className="shrink-0 transition-colors hover:text-white pr-5"
-            onClick={(e) => scrollLinkIntoView(e.currentTarget)}
+            onClick={(e) => {
+              if (navRef.current) scrollLinkIntoView(e.currentTarget, navRef.current)
+            }}
           >
             {item.label}
           </Link>
