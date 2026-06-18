@@ -13,7 +13,7 @@ export function ImageCarousel({ images, alt }: ImageCarouselProps) {
   const hasNext = currentImage < images.length - 1
 
   return (
-    <div className="relative flex-2 self-start bg-zinc-100 aspect-video overflow-hidden">
+    <div className="relative w-full xl:w-auto flex-2 self-start bg-zinc-100 aspect-video overflow-hidden">
       {images.map((src, i) => (
         <img
           key={src}
