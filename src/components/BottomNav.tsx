@@ -59,6 +59,7 @@ export function BottomNav() {
             onClick={(e) => {
               if (navRef.current) scrollLinkIntoView(e.currentTarget, navRef.current)
             }}
+            viewTransition={['vt-fade-in']}
           >
             {item.label}
           </Link>
