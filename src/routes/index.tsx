@@ -10,10 +10,10 @@ export const Route = createFileRoute('/')({
 function HomePage() {
   return (
     <section
-      className="min-h-screen w-full bg-cover bg-position-[40%_20%] brightness-90"
+      className="relative min-h-dvh w-full bg-cover bg-center bg-no-repeat bg-position-[40%_20%] brightness-90"
       style={{ backgroundImage: `url(${skyBg})` }}
     >
-      <div className="absolute top-16 right-17">
+      <div className="absolute top-16 right-17 pt-[env(safe-area-inset-top)]">
         <h1 className="text-4xl sm:text-8xl font-bold text-white text-right">Timmy Phan</h1>
         <h2 className="text-2xl sm:text-4xl font-semibold sm:font-bold text-white text-right sm:mt-2">Software Dev. @ Irvine, CA</h2>
       </div>

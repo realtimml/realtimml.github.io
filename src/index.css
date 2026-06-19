@@ -2,6 +2,12 @@
 @import "@fontsource-variable/mona-sans";
 @import "@fontsource/vt323";
 
+html,
+body,
+#root {
+  min-height: 100dvh;
+}
+
 @keyframes vt-fade-in {
   from { opacity: 0; }
 }

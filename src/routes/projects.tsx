@@ -30,7 +30,7 @@ function ProjectsPage() {
   })
 
   return (
-    <section className="min-h-screen w-full bg-[#A8D1D1]">
+    <section className="min-h-dvh w-full bg-[#A8D1D1]">
       <div className={`transition-opacity duration-300 ${isModalOpen ? 'opacity-25 pointer-events-none' : ''}`}>
         <div className="w-full flex justify-end py-8 pr-12">
           <FilterDropdown
