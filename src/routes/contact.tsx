@@ -10,7 +10,7 @@ function ContactPage() {
   const encoded = "dGltbXlwaGFuMDY2QGdtYWlsLmNvbQ==";
 
   return (
-    <section className="min-h-dvh w-full bg-[#9EA1D4] px-10 sm:px-28 pt-20">
+    <section className="min-h-app w-full bg-[#9EA1D4] px-10 sm:px-28 pt-20">
       <ContactLink
         icon={<RiGithubFill className="w-20 h-20 md:w-32 md:h-32 xl:w-40 xl:h-40" />}
         label="GitHub"
