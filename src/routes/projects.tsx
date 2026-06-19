@@ -1,6 +1,5 @@
 import { createFileRoute, Outlet, useChildMatches } from '@tanstack/react-router'
 import { useState } from 'react'
-import { useBodyBackground } from '../utils/useBodyBackground'
 import { projects } from '../data/projects'
 import { FilterDropdown, defaultFilters } from '../components/FilterDropdown'
 import { ProjectCard } from '../components/ProjectCard'
@@ -18,7 +17,6 @@ const uniqueYears = [...new Set(projects.map((p) => p.date?.slice(0, 4)).filter(
 const uniqueTechs = [...new Set(projects.flatMap((p) => p.tags))].sort()
 
 function ProjectsPage() {
-  useBodyBackground('#A8D1D1')
   const childMatches = useChildMatches()
   const isModalOpen = childMatches.length > 0
 
@@ -32,7 +30,7 @@ function ProjectsPage() {
   })
 
   return (
-    <section className="min-h-app w-full bg-[#A8D1D1]">
+    <section className="min-h-screen w-full bg-[#A8D1D1]">
       <div className={`transition-opacity duration-300 ${isModalOpen ? 'opacity-25 pointer-events-none' : ''}`}>
         <div className="w-full flex justify-end py-8 pr-12">
           <FilterDropdown

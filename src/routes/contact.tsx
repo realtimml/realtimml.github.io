@@ -1,18 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { RiGithubFill, RiLinkedinBoxFill, RiMailFill } from "react-icons/ri";
 import { ContactLink } from "../components/ContactLink";
-import { useBodyBackground } from "../utils/useBodyBackground";
 
 export const Route = createFileRoute("/contact")({
   component: ContactPage,
 });
 
 function ContactPage() {
-  useBodyBackground('#9EA1D4')
   const encoded = "dGltbXlwaGFuMDY2QGdtYWlsLmNvbQ==";
 
   return (
-    <section className="min-h-app w-full bg-[#9EA1D4] px-10 sm:px-28 pt-20">
+    <section className="min-h-screen w-full bg-[#9EA1D4] px-10 sm:px-28 pt-20">
       <ContactLink
         icon={<RiGithubFill className="w-20 h-20 md:w-32 md:h-32 xl:w-40 xl:h-40" />}
         label="GitHub"

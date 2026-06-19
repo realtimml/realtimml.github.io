@@ -3,22 +3,10 @@
 @import "@fontsource/vt323";
 
 html,
-body,
-#root {
-  min-height: 100svh;
-}
-
-/* Prevents white flash behind browser chrome on iOS Safari */
 body {
+  /* Fallback color Safari 26 Liquid Glass samples when no fixed element
+     is near the viewport edge. Prevents a white or transparent gap. */
   background-color: #09090b;
-}
-
-@utility min-h-app {
-  /* Extend sections behind top and bottom Safari 26 Liquid Glass chrome.
-     BLEED_BOTTOM (140px) makes the section's background fill behind the
-     bottom toolbar so glass composites real content, not the body fallback. */
-  min-height: calc(100svh + 140px);
-  padding-bottom: 140px;
 }
 
 @keyframes vt-fade-in {
