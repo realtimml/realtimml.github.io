@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { NeofetchCard } from "../components/NeofetchCard";
 import groundBg from "../assets/imgs/Backgrounds/ground.jpg";
 import { preloadImage } from "../utils/preloadImage";
+import { useBodyBackground } from "../utils/useBodyBackground";
 
 export const Route = createFileRoute("/about")({
   loader: () => preloadImage(groundBg),
@@ -9,6 +10,8 @@ export const Route = createFileRoute("/about")({
 });
 
 function AboutPage() {
+  useBodyBackground('#6B7A5E')
+
   return (
     <section className="relative min-h-app w-full overflow-hidden brightness-80">
       <div

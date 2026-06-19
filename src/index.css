@@ -2,23 +2,23 @@
 @import "@fontsource-variable/mona-sans";
 @import "@fontsource/vt323";
 
-html {
-  height: -webkit-fill-available;
-}
-
+html,
 body,
 #root {
-  min-height: 100vh;
-  min-height: 100dvh;
-  min-height: -webkit-fill-available;
-  min-height: var(--app-height, 100dvh);
+  min-height: 100svh;
+}
+
+/* Prevents white flash behind browser chrome on iOS Safari */
+body {
+  background-color: #09090b;
 }
 
 @utility min-h-app {
-  min-height: 100vh;
-  min-height: 100dvh;
-  min-height: -webkit-fill-available;
-  min-height: var(--app-height, 100dvh);
+  /* Extend sections behind top and bottom Safari 26 Liquid Glass chrome.
+     BLEED_BOTTOM (140px) makes the section's background fill behind the
+     bottom toolbar so glass composites real content, not the body fallback. */
+  min-height: calc(100svh + 140px);
+  padding-bottom: 140px;
 }
 
 @keyframes vt-fade-in {

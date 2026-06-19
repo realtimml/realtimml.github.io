@@ -7,8 +7,8 @@ export const Route = createRootRoute({
 
 function RootLayout() {
   return (
-    <div className="flex min-h-app flex-col bg-zinc-950 text-zinc-50">
-      <main className="w-full flex-1">
+    <div className="min-h-app bg-zinc-950 text-zinc-50">
+      <main className="w-full">
         <Outlet />
       </main>
       <BottomNav />

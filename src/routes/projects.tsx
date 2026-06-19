@@ -1,5 +1,6 @@
 import { createFileRoute, Outlet, useChildMatches } from '@tanstack/react-router'
 import { useState } from 'react'
+import { useBodyBackground } from '../utils/useBodyBackground'
 import { projects } from '../data/projects'
 import { FilterDropdown, defaultFilters } from '../components/FilterDropdown'
 import { ProjectCard } from '../components/ProjectCard'
@@ -17,6 +18,7 @@ const uniqueYears = [...new Set(projects.map((p) => p.date?.slice(0, 4)).filter(
 const uniqueTechs = [...new Set(projects.flatMap((p) => p.tags))].sort()
 
 function ProjectsPage() {
+  useBodyBackground('#A8D1D1')
   const childMatches = useChildMatches()
   const isModalOpen = childMatches.length > 0
 

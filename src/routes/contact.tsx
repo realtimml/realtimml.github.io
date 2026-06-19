@@ -1,12 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { RiGithubFill, RiLinkedinBoxFill, RiMailFill } from "react-icons/ri";
 import { ContactLink } from "../components/ContactLink";
+import { useBodyBackground } from "../utils/useBodyBackground";
 
 export const Route = createFileRoute("/contact")({
   component: ContactPage,
 });
 
 function ContactPage() {
+  useBodyBackground('#9EA1D4')
   const encoded = "dGltbXlwaGFuMDY2QGdtYWlsLmNvbQ==";
 
   return (
