@@ -56,7 +56,7 @@ function ProjectModal() {
           onClick={(e) => e.stopPropagation()}
         >
           <p className="text-lg font-semibold">Project not found: "{slug}"</p>
-          <Link to="/projects" className="text-sm underline" viewTransition={{ types: ['vt-fade-in'] }}>
+          <Link to="/projects" className="text-sm underline decoration-1" viewTransition={{ types: ['vt-fade-in'] }}>
             Back to projects
           </Link>
         </div>
@@ -133,7 +133,7 @@ function ProjectModal() {
                     className="flex items-center gap-2 text-black hover:opacity-70 transition-opacity"
                   >
                     {getLinkIcon(link.label)}
-                    <span className="hidden xl:inline text-xl font-medium underline underline-offset-2">
+                    <span className="hidden xl:inline text-xl font-medium underline underline-offset-2 decoration-2">
                       {link.label}
                     </span>
                   </a>

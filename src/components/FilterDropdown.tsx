@@ -113,7 +113,7 @@ export function FilterDropdown({ filters, onChange, uniqueYears, uniqueTechs }: 
           {hasActiveFilters && (
             <button
               onClick={() => onChange(defaultFilters)}
-              className="text-sm text-gray-500 hover:text-black underline text-left"
+              className="text-sm text-gray-500 hover:text-black underline decoration-1 text-left"
             >
               Clear filters
             </button>

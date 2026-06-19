@@ -98,7 +98,7 @@ export const projects: Project[] = [
     title: 'MAGI',
     description:
       'A multi-agent AWS system that orchestrates an LLM swarm for consensus-driven prompt resolution, managed via a real-time React dashboard. Inspired by Neon Genesis Evangelion.',
-    tags: ['React', 'TypeScript', 'Tailwind', 'AWS Bedrock', 'AWS Lambda', 'DynamoDB'],
+    tags: [ 'DynamoDB', 'AWS Bedrock', 'AWS Lambda', 'React', 'TypeScript', 'Tailwind'],
     images: [
       new URL('../assets/imgs/MAGI/2.png', import.meta.url).href,
       new URL('../assets/imgs/MAGI/1.png', import.meta.url).href,

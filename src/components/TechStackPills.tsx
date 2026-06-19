@@ -26,7 +26,7 @@ const TAG_ICONS: Record<string, React.ReactNode> = {
   'AWS API Gateway': <FaAws className="text-2xl" />,
   Python: <DiPython className="text-2xl" />,
   OpenCV: <SiOpencv className="text-2xl" />,
-  Ultralytics: <SiUltralytics className="text-2xl" />,
+  Ultralytics: <SiUltralytics className="text-1xl" />,
   DynamoDB: <FaAws className="text-2xl" />,
 }
 
