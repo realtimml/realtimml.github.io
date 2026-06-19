@@ -47,7 +47,7 @@ export function BottomNav() {
         />
       <nav
         ref={navRef}
-        className={`fixed inset-x-0 bottom-0 mb-25 sm:mb-20 flex h-[1.1lh] gap-5 overflow-x-auto px-10 sm:px-20 text-nowrap font-semibold text-6xl sm:text-7xl text-white/75 divide-x-4 divide-white/75 scrollbar-none transition-opacity duration-300 [&::-webkit-scrollbar]:hidden ${isProjectModalOpen ? 'opacity-25 pointer-events-none' : ''}`}
+        className={`fixed inset-x-0 bottom-0 mb-25 sm:mb-20 flex h-[1.1lh] gap-5 overflow-x-auto overflow-y-hidden px-10 sm:px-20 text-nowrap font-semibold text-6xl sm:text-7xl text-white/75 divide-x-4 divide-white/75 scrollbar-none transition-opacity duration-300 [&::-webkit-scrollbar]:hidden ${isProjectModalOpen ? 'opacity-25 pointer-events-none' : ''}`}
       >
         {navItems.map((item) => (
           <Link
