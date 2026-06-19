@@ -1,0 +1,36 @@
+@import "tailwindcss";
+@import "@fontsource-variable/mona-sans";
+@import "@fontsource/vt323";
+
+@keyframes vt-fade-in {
+  from { opacity: 0; }
+}
+
+::view-transition-old(root) {
+  animation: none;
+}
+::view-transition-new(root) {
+  animation: 150ms ease-in-out both vt-fade-in;
+}
+
+@theme {
+    --font-monospace: "VT323", monospace;
+    --font-sans: "Mona Sans Variable", sans-serif;
+    --animate-typing: typing 0.5s steps(8, end);
+    --animate-caret: caret 1.5s step-end infinite;
+    --animate-reveal: reveal 0.75s step-end both;
+    --animate-caret-reveal: caret 1.5s step-end infinite, reveal 0.75s step-end both;
+
+    @keyframes typing {
+        from { width: 26ch; }
+        to { width: 34ch; }
+    }
+
+    @keyframes caret {
+        50% { border-color: currentColor; }
+    }
+
+    @keyframes reveal {
+        from { visibility: hidden; }
+    }
+}
