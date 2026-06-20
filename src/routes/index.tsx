@@ -1,5 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router'
-import skyBg from '../assets/imgs/Backgrounds/sky.jpg'
+import skyBg from '../assets/imgs/Backgrounds/sky.avif'
 import { preloadImage } from '../utils/preloadImage'
 
 export const Route = createFileRoute('/')({
