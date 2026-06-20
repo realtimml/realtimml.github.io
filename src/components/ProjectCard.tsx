@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Link } from '@tanstack/react-router'
 import { RiTrophyFill } from 'react-icons/ri'
 
@@ -9,14 +10,26 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ slug, imageUrl, title, award }: ProjectCardProps) {
+  const [isImageLoaded, setIsImageLoaded] = useState(false)
+
+  const loadingTextClass = 'text-zinc-300 animate-pulse'
+  const hoverClass = '-translate-x-full group-hover:translate-x-0 transition-transform duration-300'
+
+  console.log(title, isImageLoaded)
+
   return (
     <Link to="/projects/$slug" params={{ slug }} className="relative block hover:scale-95 transition-transform duration-300 group overflow-hidden" viewTransition={{ types: ['vt-fade-in'] }}>
-      <div className='absolute w-full aspect-video bg-white flex items-center justify-center -translate-x-full group-hover:translate-x-0 transition-transform duration-300'>
-        <p className='text-5xl text-center font-bold text-[#bed2d2]'>{title}</p>
+      <div className={`absolute w-full aspect-video bg-white flex items-center justify-center ${isImageLoaded ? hoverClass : ''}`}>
+        <p className={`text-5xl text-center font-bold ${isImageLoaded ? 'text-[#bed2d2]' : loadingTextClass}`}>{title}</p>
       </div>
-      <img src={imageUrl} alt={title} className="w-full" />
+      <img
+        src={imageUrl}
+        alt={title}
+        className="w-full"
+        onLoad={() => setIsImageLoaded(true)}
+      />
       {award && (
-        <RiTrophyFill className="absolute bottom-4 right-4 text-3xl text-[#F1F7B5] drop-shadow-sm group-hover:text-[#bed2d2] transition-colors duration-200" />
+        <RiTrophyFill className={`absolute bottom-4 right-4 text-3xl ${isImageLoaded ? 'text-[#F1F7B5]' : loadingTextClass} drop-shadow-sm group-hover:text-[#bed2d2] transition-colors duration-200`} />
       )}
     </Link>
   );
