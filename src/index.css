@@ -2,6 +2,12 @@
 @import "@fontsource-variable/mona-sans";
 @import "@fontsource/vt323";
 
+@custom-variant pointer-coarse (@media (pointer: coarse));
+@custom-variant pointer-fine (@media (pointer: fine));
+@custom-variant can-hover (@media (hover: hover));
+@custom-variant no-hover (@media (hover: none));
+@custom-variant fine-hover (@media (hover: hover) and (pointer: fine));
+
 html,
 body {
   /* Fallback color Safari 26 Liquid Glass samples when no fixed element

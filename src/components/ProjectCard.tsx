@@ -13,7 +13,7 @@ export function ProjectCard({ slug, imageUrl, title, award }: ProjectCardProps) 
   const [isImageLoaded, setIsImageLoaded] = useState(false)
 
   const loadingTextClass = 'text-zinc-300 animate-pulse'
-  const hoverClass = '-translate-x-full group-hover:translate-x-0 transition-transform duration-300'
+  const hoverClass = 'no-hover:hidden fine-hover:-translate-x-full fine-hover:group-hover:translate-x-0 fine-hover:transition-transform duration-300'
 
   console.log(title, isImageLoaded)
 
@@ -29,7 +29,7 @@ export function ProjectCard({ slug, imageUrl, title, award }: ProjectCardProps) 
         onLoad={() => setIsImageLoaded(true)}
       />
       {award && (
-        <RiTrophyFill className={`absolute bottom-4 right-4 text-3xl ${isImageLoaded ? 'text-[#F1F7B5]' : loadingTextClass} drop-shadow-sm group-hover:text-[#bed2d2] transition-colors duration-200`} />
+        <RiTrophyFill className={`absolute bottom-4 right-4 text-3xl ${isImageLoaded ? 'text-[#F1F7B5]' : loadingTextClass} drop-shadow-sm fine-hover:group-hover:text-[#bed2d2] transition-colors duration-200`} />
       )}
     </Link>
   );
