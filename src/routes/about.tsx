@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { NeofetchCard } from "../components/NeofetchCard";
-import groundBg from "../assets/imgs/Backgrounds/ground.jpg";
+import groundBg from "../assets/imgs/Backgrounds/ground.avif";
 import { preloadImage } from "../utils/preloadImage";
 
 export const Route = createFileRoute("/about")({
