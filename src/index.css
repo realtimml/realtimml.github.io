@@ -10,7 +10,8 @@
 
 html,
 body {
-  /* Fallback for Safari 26 Liquid Glass when edge samplers are absent. */
+  /* Fallback color Safari 26 Liquid Glass samples when no fixed element
+     is near the viewport edge. Prevents a white or transparent gap. */
   background-color: #09090b;
 }
 
