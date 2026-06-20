@@ -9,6 +9,17 @@ body {
   background-color: #09090b;
 }
 
+html[data-scroll-lock],
+html[data-scroll-lock] body {
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+html[data-scroll-lock] #root {
+  height: 100dvh;
+  overflow: hidden;
+}
+
 @keyframes vt-fade-in {
   from { opacity: 0; }
 }
